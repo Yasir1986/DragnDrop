@@ -63,15 +63,6 @@ class FilledTextFields extends React.Component {
             margin="normal"
             variant="filled"
           />
-            <TextField
-            id="filled-password-input"
-            label="Password"
-            className={classes.textField}
-            type="password"
-            autoComplete="current-password"
-            margin="normal"
-            variant="filled"
-          />
           <Button>Sign in</Button>
         </form>
       </StyledWrapper>
