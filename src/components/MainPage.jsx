@@ -77,7 +77,6 @@ FilledTextFields.propTypes = {
 export default withStyles(styles)(FilledTextFields);
 
 const StyledWrapper = styled.div`
-
     margin: 10%;
     text-align: -webkit-center;
 `;

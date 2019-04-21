@@ -32,6 +32,7 @@ const StyledFooter = styled.div`
 
 const StyledList = styled.div`
   display: flex;
+  
   justify-content: space-around;
     a:link {
      text-decoration: none;
