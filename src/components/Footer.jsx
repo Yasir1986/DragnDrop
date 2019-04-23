@@ -19,21 +19,23 @@ class Footer extends Component {
 export default Footer;
 
 const StyledFooter = styled.div`
-  padding: 2%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  height: 7%;
+  position: fixed;
   left: 0;
+  bottom: 0;
+  width: 100%;
+  top: 2;
+  line-height: 0.5rem;
   background-color: #efefef;
   text-align: center;
-  height: 5%;
 `;
 
 const StyledList = styled.div`
+  line-height: 1rem;
   display: flex;
-  
+  background-color: #efefef;
   justify-content: space-around;
-    a:link {
-     text-decoration: none;
-    }
+  a:link {
+    text-decoration: none;
+  }
 `;

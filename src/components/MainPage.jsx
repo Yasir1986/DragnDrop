@@ -18,38 +18,45 @@ const styles = theme => ({
 });
 
 class FilledTextFields extends React.Component {
-  state = {};
+  state = {
+    fullName: "",
+    email: "",
+    password: ""
+  };
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value
-    });
+  
+  handleChange = props => event => {
+    event.preventDefault()
+    this.setState({ [props]: event.target.value });
   };
 
   render() {
     const { classes } = this.props;
+    console.log(this.state.fullName)
+    console.log(this.state.email)
+    console.log(this.state.password)
 
     return (
       <StyledWrapper>
-        <form className={classes.container} noValidate autoComplete="off">
+        <form  className={classes.container}>
           <TextField
+            value={this.state.fullName}
+            onChange={this.handleChange("fullName")}
             id="filled-name-input"
             label="Full Name"
             className={classes.textField}
             type="name"
-            name="name"
-            autoComplete="name"
             margin="normal"
             variant="filled"
           />
 
           <TextField
             id="filled-email-input"
+            value={this.state.email}
+            onChange={this.handleChange("email")}
             label="Email"
             className={classes.textField}
             type="email"
-            name="email"
-            autoComplete="email"
             margin="normal"
             variant="filled"
           />
@@ -59,11 +66,17 @@ class FilledTextFields extends React.Component {
             label="Password"
             className={classes.textField}
             type="password"
-            autoComplete="current-password"
             margin="normal"
             variant="filled"
+            value={this.state.password}
+            onChange={this.handleChange("password")}
           />
-          <Button>Sign in</Button>
+          <Button
+           onClick={() => {
+                    alert("Signing In...")}}
+          >
+          Sign in
+          </Button>
         </form>
       </StyledWrapper>
     );
