@@ -24,7 +24,12 @@ class FilledTextFields extends React.Component {
     password: ""
   };
 
-  
+  alert(){
+    console.log(this.state.fullName)
+    console.log(this.state.email)
+    console.log(this.state.password)
+  }
+
   handleChange = props => event => {
     event.preventDefault()
     this.setState({ [props]: event.target.value });
@@ -73,7 +78,10 @@ class FilledTextFields extends React.Component {
           />
           <Button
            onClick={() => {
-                    alert("Signing In...")}}
+                    alert('FullName:'+(this.state.fullName)+
+                          'Email:'+(this.state.email),
+                    )
+                  }}
           >
           Sign in
           </Button>
