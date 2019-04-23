@@ -24,7 +24,6 @@ const StyledFooter = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
   background-color: #efefef;
   text-align: center;
   height: 5%;
