@@ -6,8 +6,8 @@ class Footer extends Component {
     return (
       <StyledFooter>
         <StyledList>
-          <a href="/resume">Home</a>
-          <a href="/projects">About Us</a>
+          <a href="/">Home</a>
+          <a href="/about">About Us</a>
           <a href="/contact">Contact</a>
         </StyledList>
         <p>© 2018 Yasir All Rights Reserved.</p>

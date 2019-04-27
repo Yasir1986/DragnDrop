@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const mainmenu = {
   
@@ -45,9 +46,9 @@ class SimpleMenu extends React.Component {
           onClose={this.handleClose}
         >
         
-          <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose}>My account</MenuItem>
-          <MenuItem onClick={this.handleClose}>Logout</MenuItem>
+       <Link to="/">   <MenuItem onClick={this.handleClose}>Home</MenuItem></Link>
+       <Link to="/about">  <MenuItem onClick={this.handleClose}>About</MenuItem></Link>
+       <Link to="/contact"> <MenuItem onClick={this.handleClose}>Contact</MenuItem></Link>
        
         </Menu>
         </StyledOpenMenu>

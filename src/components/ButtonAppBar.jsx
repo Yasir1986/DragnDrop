@@ -6,6 +6,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import SimpleMenu from "../components/SimpleMenu.jsx";
+import { Link } from "react-router-dom";
 
 const styles = {
   root: {
@@ -13,7 +14,7 @@ const styles = {
   },
   grow: {
     flexGrow: 1
-  },
+  }
 };
 
 function ButtonAppBar(props) {
@@ -24,9 +25,15 @@ function ButtonAppBar(props) {
         <Toolbar>
           <SimpleMenu />
           <Typography variant="h6" color="inherit" className={classes.grow} />
-          <Button color="inherit">Home</Button>
-          <Button color="inherit">About Us</Button>
-          <Button color="inherit">Contact</Button>
+          <Link to="/">
+            <Button color="inherit">Home</Button>
+          </Link>
+          <Link to="/about">
+            <Button color="inherit">About Us</Button>
+          </Link>
+          <Link to="/contact">
+            <Button color="inherit">Contact</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

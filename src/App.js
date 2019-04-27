@@ -5,7 +5,7 @@ import MainPage from "./components/MainPage";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
       <ButtonAppBar />
         <Route exact path="/" component={MainPage} />
         <Route path="/about" component={About} />
-        <Route path="/topics" component={Contact} />
+        <Route path="/contact" component={Contact} />
         <Footer />
       </div>
       </Router>
