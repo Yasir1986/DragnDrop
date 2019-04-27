@@ -42,7 +42,8 @@ class About extends Component {
           </section>
         )}
       </Dropzone>
-          <input type="file"/><button onClick={this.Upload()}>Upload</button>
+          <input type="file"/>
+          <button onClick={this.Upload}>Upload</button>
       </div>
     );
   }
