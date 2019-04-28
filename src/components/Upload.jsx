@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Dropzone from 'react-dropzone';
+import styled from 'styled-components';
 
 
-class About extends Component {
+class Upload extends Component {
     constructor() {
         super();
         this.onDrop = (files) => {
@@ -26,13 +27,14 @@ class About extends Component {
         ));
     
     return (
-      <div>
+      <StyledWrapper>
           <h1>Drag and Drop here</h1>
-          <Dropzone onDrop={this.onDrop}>
+          <Dropzone 
+          onDrop={this.onDrop}>
         {({getRootProps, getInputProps}) => (
-          <section className="container">
-            <div {...getRootProps({className: 'dropzone'})}>
-              <input {...getInputProps()} />
+          <section     >
+            <div  style={border} {...getRootProps({className: 'dropzone'})}>
+              <input   {...getInputProps()} />
               <p>Drag 'n' drop some files here, or click to select files</p>
             </div>
             <aside>
@@ -44,9 +46,21 @@ class About extends Component {
       </Dropzone>
           <input type="file"/>
           <button onClick={this.Upload}>Upload</button>
-      </div>
+      </StyledWrapper>
     );
   }
 }
 
-export default About;
+export default Upload;
+
+const StyledWrapper = styled.div`
+ text-align: center;
+`;
+
+
+const border = {
+  height: '200px',
+  width: '700px',
+  display: 'inline-block',
+  border: '1px dotted black',
+};

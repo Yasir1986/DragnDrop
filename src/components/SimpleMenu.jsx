@@ -47,7 +47,7 @@ class SimpleMenu extends React.Component {
         >
         
        <Link to="/">   <MenuItem onClick={this.handleClose}>Home</MenuItem></Link>
-       <Link to="/about">  <MenuItem onClick={this.handleClose}>About</MenuItem></Link>
+       <Link to="/upload">  <MenuItem onClick={this.handleClose}>Upload</MenuItem></Link>
        <Link to="/contact"> <MenuItem onClick={this.handleClose}>Contact</MenuItem></Link>
        
         </Menu>

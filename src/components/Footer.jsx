@@ -7,7 +7,7 @@ class Footer extends Component {
       <StyledFooter>
         <StyledList>
           <a href="/">Home</a>
-          <a href="/about">About Us</a>
+          <a href="/upload">Upload</a>
           <a href="/contact">Contact</a>
         </StyledList>
         <p>© 2018 Yasir All Rights Reserved.</p>
