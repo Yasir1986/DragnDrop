@@ -15,7 +15,7 @@ class Upload extends Component {
       }
     
     Upload() {
-        alert("File Uploaded!");
+        alert("File Uploaded...");
     }
     
   render() {
